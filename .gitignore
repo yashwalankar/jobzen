@@ -1,0 +1,11 @@
+# Cache and output
+.cache/
+output/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Env
+.env
