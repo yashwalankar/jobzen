@@ -1,0 +1,33 @@
+{
+  "company_blocklist": [
+    "Jobot",
+    "Crossover",
+    "hackajob",
+    "Dice",
+    "Jobs via Dice",
+    "CyberCoders",
+    "Staffmark",
+    "TEKsystems",
+    "Apex Systems",
+    "RemoteHunter",
+    "DataAnnotation",
+    "Mercor",
+    "Alignerr",
+    "Crossing Hurdles",
+    "AgileGrid Solutions",
+    "Jobright.ai",
+    "Rex.zone",
+    "Jobs Ai",
+    "Jobgether",
+    "Quick Hire Staffing",
+    "Sundayy"
+
+  ],
+  "title_blocklist": [
+    "Staff",
+    "Principal",
+    "Director",
+    "VP of ",
+    "Vice President"
+  ]
+}

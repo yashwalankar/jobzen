@@ -1,0 +1,68 @@
+{
+  "_comment": "LinkedIn Job Scraper — edit these values to customize your search. All keys are optional; omitted keys fall back to DEFAULT_CONFIG in scraper.py.",
+  "search_term": "software engineer",
+  "location": "United States",
+  "is_remote": true,
+  "distance": 50,
+  "hours_old": 24,
+  "results_per_source": 1000,
+  "job_type": "fulltime",
+  "description_blocklist" : ["TS/SCI", "security clearance", "polygraph"],
+  "searches": [
+    {
+      "search_term": "Software Engineer Payments",
+      "location": "Ann Arbor, Michigan, United States",
+      "is_remote": false
+    },
+    {
+      "search_term": "Software Engineer",
+      "location": "Ann Arbor, Michigan, United States",
+      "is_remote": false
+    },
+    {
+      "search_term": "Cloud Engineer",
+      "location": "Ann Arbor, Michigan, United States",
+      "is_remote": false
+    },
+    {
+      "search_term": "Backend Engineer",
+      "location": "Ann Arbor, Michigan, United States",
+      "is_remote": false
+    },
+    {
+      "search_term": "Software Engineer",
+      "location": "Ann Arbor, Michigan, United States",
+      "is_remote": false
+    },
+    {
+      "search_term": "Software Engineer",
+      "location": "Ann Arbor, Michigan, United States",
+      "is_remote": true
+    },
+    {
+      "search_term": "Software Engineer Payments",
+      "location": "United States",
+      "distance": null,
+      "is_remote": true
+    },
+    {
+      "search_term": "Software Engineer",
+      "location": "United States",
+      "distance": null,
+      "is_remote": true
+    }
+  ],
+  "excluded_location_keywords": [
+    "canada",
+    "windsor",
+    "ontario"
+  ],
+  "output_file": "output/output_jobs.json",
+  "output_columns": [],
+  "seen_ids_file": ".cache/seen_jobs.json",
+  "global_blocklist_file": "global_blocklist.json",
+  "fetch_description": true,
+  "filtered_job_posts_minimum": 0,
+  "hours_old_max": 168,
+  "hours_old_increment": 24
+}
