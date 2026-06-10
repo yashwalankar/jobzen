@@ -2,7 +2,7 @@
     "input_file": "output/output_jobs.json",
     "resume_file": "about-me/resume.md",
     "output_file": "output/report.csv",
-    "output_columns": ["id","site","job_url","title","company","location","job_type","is_remote","job_level","job_function","keyword_match_score","tfidf_cosine_score","semantic_score","final_score","description"],
+    "output_columns": ["id","site","job_link","company","location","job_type","is_remote","job_level","job_function","keyword_match_score","tfidf_cosine_score","semantic_score","final_score","description"],
     "steps": [
         { "name": "keyword_match",  "enabled": true, "weight": 0.25 },
         { "name": "tfidf_cosine",   "enabled": true, "weight": 0.25 },

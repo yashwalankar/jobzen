@@ -401,6 +401,12 @@ def df_to_records(df: pd.DataFrame, columns: list | None = None) -> list:
                 record[col] = int(val)
             else:
                 record[col] = val
+        raw_title = record.get("title")
+        raw_url = record.get("job_url")
+        if raw_title and raw_url:
+            record["job_link"] = f"[{raw_title}]({raw_url})"
+        record.pop("job_url", None)
+        record.pop("title", None)
         out.append(record)
     return out
 

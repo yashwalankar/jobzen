@@ -153,6 +153,31 @@ The scored report is written to `output/report.csv` (or the name passed via `--r
 
 ---
 
+## Generating an HTML report
+
+`generate_job_report.py` converts a scored JSON file (produced by an LLM evaluation step) into a filterable, sortable HTML report.
+
+```bash
+python generate_job_report.py <input.json> [output.html]
+```
+
+- `input.json` — JSON file containing a list of evaluated job objects (each with `overall_score`, `dimensions`, `recommendation`, `company`, `job_link`, etc.)
+- `output.html` — optional; defaults to `<input_stem>_report.html` in the same directory
+
+### Examples
+
+```bash
+# Output written to output_jobs_report.html
+python generate_job_report.py output/output_jobs.json
+
+# Specify output path explicitly
+python generate_job_report.py output/output_jobs.json output/report.html
+```
+
+Open the generated `.html` file in any browser — no server required.
+
+---
+
 ## Project structure
 
 ```
@@ -173,5 +198,6 @@ The scored report is written to `output/report.csv` (or the name passed via `--r
 ├── pipeline_config.json        # Pipeline and scoring settings
 ├── scraper.py                  # LinkedIn scraper
 ├── pipeline.py                 # Orchestrates scraping + scoring
+├── generate_job_report.py      # Converts evaluated JSON to HTML report
 └── requirements.txt
 ```
