@@ -9,3 +9,6 @@ __pycache__/
 
 # Env
 .env
+
+# personal files
+about-me/resume.md
