@@ -2,11 +2,19 @@
     "input_file": "output/output_jobs.json",
     "resume_file": "about-me/resume.md",
     "output_file": "output/report.csv",
-    "output_columns": ["id","site","job_link","company","location","job_type","is_remote","job_level","job_function","keyword_match_score","tfidf_cosine_score","semantic_score","final_score","description"],
+    "output_columns": [
+        "id", "site", "job_link", "company", "location",
+        "job_type", "is_remote", "job_level", "job_function",
+        "keyword_match_score", "tfidf_cosine_score", "semantic_score",
+        "cross_encoder_score", "llm_fit_score", "llm_fit_rationale",
+        "final_score", "description"
+    ],
     "steps": [
-        { "name": "keyword_match",  "enabled": true, "weight": 0.25 },
-        { "name": "tfidf_cosine",   "enabled": true, "weight": 0.25 },
-        { "name": "semantic_score", "enabled": true, "weight": 0.50, "model": "bge-large" }
+        { "name": "keyword_match",      "enabled": true,  "weight": 0.10 },
+        { "name": "tfidf_cosine",       "enabled": true,  "weight": 0.10 },
+        { "name": "semantic_score",     "enabled": true,  "weight": 0.35, "model": "bge-large" },
+        { "name": "cross_encoder_score","enabled": false,  "weight": 0.45, "model": "bge-reranker-v2-m3" },
+        { "name": "llm_fit_score",      "enabled": true, "weight": 0.45, "model": "qwen2.5:14b" }
     ],
     "composite_score": {
         "enabled": true,
